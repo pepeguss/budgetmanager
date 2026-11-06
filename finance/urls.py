@@ -1,0 +1,3 @@
+from django.urls import path
+from . import views
+urlpatterns = [path('',views.dashboard,name='dashboard'),path('operations/',views.operations,name='operations'),path('operations/add/',views.operation_form,name='operation_add'),path('operations/<int:pk>/edit/',views.operation_form,name='operation_edit'),path('operations/<int:pk>/delete/',views.operation_delete,name='operation_delete'),path('categories/',views.categories,name='categories'),path('categories/<int:pk>/delete/',views.category_delete,name='category_delete'),path('recurring/',views.recurring,name='recurring'),path('recurring/<int:pk>/toggle/',views.recurring_toggle,name='recurring_toggle'),path('recurring/<int:pk>/delete/',views.recurring_delete,name='recurring_delete')]
